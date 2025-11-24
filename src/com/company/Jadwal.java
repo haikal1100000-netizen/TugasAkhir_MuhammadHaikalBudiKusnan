@@ -211,18 +211,14 @@ public class Jadwal {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // Membuat dialog popup
                 JDialog dialog = new JDialog();
                 dialog.setTitle("Keseluruhan Jadwal");
 
-                // Ambil model dari tabel utama
                 javax.swing.table.DefaultTableModel model =
                         (javax.swing.table.DefaultTableModel) Jadwal.getModel();
 
-                // Buat tabel baru dengan model yang sama
                 JTable tabelView = new JTable(model);
 
-                // Tambahkan scroll bar
                 JScrollPane scrollPane = new JScrollPane(tabelView);
 
                 dialog.add(scrollPane);
@@ -234,4 +230,5 @@ public class Jadwal {
         });
 
     }
+
 }
